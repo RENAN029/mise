@@ -16,7 +16,7 @@ cd ..
 rm -rf shader-patcherx
 git clone https://github.com/LazyVim/starter ~/.config/nvim
 rm -rf ~/.config/nvim/.git
-echo "sudo pacman -S fzf starship ripgrep zoxide choose mcfly gping procs eza duf bat sd fd tldr dust" 
+echo "sudo pacman -S fzf starship ripgrep zoxide choose mcfly gping procs eza bat sd fd tldr dust duf" 
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 
 sudo pacman -Scc --noconfirm
