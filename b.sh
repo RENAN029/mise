@@ -16,7 +16,7 @@ cd ..
 rm -rf shader-patcherx
 git clone https://github.com/LazyVim/starter ~/.config/nvim
 rm -rf ~/.config/nvim/.git
-echo "sudo pacman -S ripgrep zoxide ldns tldr fzf eza duf bat fd choose procs gping mcfly sd rustscan" 
+echo "sudo pacman -S ripgrep zoxide procs gping btop dust duf bat eza fd sd" 
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 
 sudo pacman -Scc --noconfirm
