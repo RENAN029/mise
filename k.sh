@@ -4,7 +4,7 @@ sudo pacman -S --noconfirm noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-noto-n
 sudo pacman -S --noconfirm ffmpeg gst-plugins-ugly gst-plugins-good gst-plugins-base gst-plugins-bad gst-libav gstreamer
 sudo pacman -S --noconfirm ark nvidia-open intel-ucode git neovim fastfetch btop ufw fwupd flatpak yt-dlp aria2 earlyoom  
 sudo pacman -S --noconfirm plasma-meta kdeconnect konsole dolphin partitionmanager ffmpegthumbs dolphin-plugins sweeper 
-echo "sudo pacman -S zerotier-one tailscale wpa_supplicant xdg-utils github-cli ly libqalculate superfile zellij"
+echo "sudo pacman -S zerotier-one tailscale wpa_supplicant xdg-utils github-cli ly libqalculate superfile zellij rustup"
 sudo pacman -S --noconfirm gamemode fuse dnsmasq apparmor 
 git clone https://github.com/maximilionus/lucidglyph.git
 systemctl enable sddm earlyoom dnsmasq apparmor 
