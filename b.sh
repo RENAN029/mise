@@ -16,7 +16,7 @@ cd ..
 rm -rf shader-patcherx
 git clone https://github.com/LazyVim/starter ~/.config/nvim
 rm -rf ~/.config/nvim/.git
-echo "sudo pacman -S fzf starship fish fisher ripgrep zoxide tldr eza bat duf fd lazygit lazydocker" 
+echo "sudo pacman -S fzf starship fish fisher ripgrep zoxide tldr eza bat mcfly fd lazygit lazydocker" 
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 
 sudo pacman -Scc --noconfirm
