@@ -8,7 +8,7 @@ chmod +x b.sh
 
 sudo pacman -Scc
 
-sudo pacman -S  
+sudo pacman -S 
 
 sudo pacman -Syu $(pacman -Qnq) 
 
