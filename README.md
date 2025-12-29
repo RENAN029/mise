@@ -6,7 +6,7 @@ chmod +x b.sh
 
 ./b.sh
 
-sudo pacman -Scc 
+sudo pacman -Scc mise 
 
 sudo pacman -S python-pip rustup
 
