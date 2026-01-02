@@ -28,6 +28,25 @@ check_sudo() {
     fi
 }
 
+# Função para verificar ambiente chroot/docker e pular sudo se necessário
+skip_sudo_check() {
+    # Verifica se estamos em ambiente chroot ou docker
+    if [ -f /proc/1/root/.dockerenv ] || [ -f /.dockerenv ] || [ -n "$CHROOT" ]; then
+        echo "⚠ Ambiente chroot/docker detectado, pulando verificação sudo..."
+        echo "  (Assumindo que já está rodando como root)"
+        return 0
+    fi
+    
+    # Verifica se está em chroot por outros métodos
+    if [ "$(stat -c %d:%i /)" != "$(stat -c %d:%i /proc/1/root/.)" ]; then
+        echo "⚠ Ambiente chroot detectado, pulando verificação sudo..."
+        return 0
+    fi
+    
+    # Se não for chroot/docker, faz verificação normal
+    check_sudo
+}
+
 # ============================
 # MENUS PRINCIPAIS
 # ============================
@@ -1782,7 +1801,7 @@ main_menu() {
 
 init() {
     check_arch
-    check_sudo
+    skip_sudo_check  # Usa a nova função que suporta chroot
     clear
     main_menu
 }
